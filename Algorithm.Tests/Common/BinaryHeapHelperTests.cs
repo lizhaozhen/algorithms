@@ -4,7 +4,7 @@ using Algorithm.Common;
 
 namespace Algorithm.Tests.Common
 {
-    public class HeapHelperTests
+    public class BinaryHeapHelperTests
     {
         [Theory]
         [InlineData(1,0)]
@@ -15,7 +15,7 @@ namespace Algorithm.Tests.Common
         [InlineData(6,2)]
         public void GetParentIndexTest(int index, int parentIndex)
         {
-            var actual = HeapHelper.GetParentIndex(index);
+            var actual = BinaryHeapHelper.GetParentIndex(index);
 
             Assert.Equal(parentIndex, actual);
         }
@@ -26,7 +26,7 @@ namespace Algorithm.Tests.Common
         [InlineData(2,5)]
         public void GetLeftChildIndexTest(int index, int leftChildIndex)
         {
-            var actual = HeapHelper.GetLeftChildIndex(index);
+            var actual = BinaryHeapHelper.GetLeftChildIndex(index);
 
             Assert.Equal(leftChildIndex, actual);
         }
@@ -37,7 +37,7 @@ namespace Algorithm.Tests.Common
         [InlineData(2,6)]
         public void GetRightChildIndexTest(int index, int rightChildIndex)
         {
-            var actual = HeapHelper.GetRightChildIndex(index);
+            var actual = BinaryHeapHelper.GetRightChildIndex(index);
 
             Assert.Equal(rightChildIndex, actual);
         }

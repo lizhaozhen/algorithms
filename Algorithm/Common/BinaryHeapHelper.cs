@@ -2,7 +2,7 @@ using System;
 
 namespace Algorithm.Common
 {
-    public class HeapHelper
+    public class BinaryHeapHelper
     {
         public static int GetParentIndex(int x)
         {
