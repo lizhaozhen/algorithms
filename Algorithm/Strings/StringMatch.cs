@@ -14,10 +14,10 @@ namespace Algorithm.Strings
 
             var cur = new int[second.Length + 1];
             for(int i=0; i<=second.Length; i++) cur[i] = i;
+            var next = new int[second.Length + 1];
 
             for(int i=0; i<first.Length; i++)
             {
-                var next = new int[second.Length + 1];
                 next[0] = cur[0] + 1;
                 for(int j=1; j<=second.Length; j++)
                 {
@@ -25,7 +25,7 @@ namespace Algorithm.Strings
                         System.Math.Min(cur[j] + 1, next[j-1] + 1), 
                         cur[j-1] + (first[i] == second[j-1] ? 0 : 1));
                 }
-                cur = next;
+                Common.Utility.Swap(ref cur, ref next);
             }
 
             return cur[second.Length];
