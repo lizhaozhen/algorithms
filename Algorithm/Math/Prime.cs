@@ -6,7 +6,7 @@ namespace Algorithm.Math
 {
     public class Prime
     {
-        public static bool IsPrime(int num)
+        public static bool IsPrime(dynamic num)
         {
             if(num <= 1) return false;
 

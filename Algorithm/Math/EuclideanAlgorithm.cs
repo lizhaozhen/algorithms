@@ -21,7 +21,7 @@ namespace Algorithm.Math
         // https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm
         // a * x + b * y = gcd
         // Return values are x, y, gcd
-        public static (int, int, int) ExtendedGreatestCommonDivisor(dynamic a, dynamic b)
+        public static (dynamic, dynamic, dynamic) ExtendedGreatestCommonDivisor(dynamic a, dynamic b)
         {
             if(b == 0)
             {

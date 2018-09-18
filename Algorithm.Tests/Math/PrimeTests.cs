@@ -20,6 +20,16 @@ namespace Algorithm.Tests.Math
         }
 
         [Theory]
+        [InlineData(123456789789, false)]
+        [InlineData(87178291199, true)]
+        public void IsPrimeTest_Long(long num, bool isPrime)
+        {
+            var actual = Algorithm.Math.Prime.IsPrime(num);
+
+            Assert.Equal(isPrime, actual);
+        }
+
+        [Theory]
         [InlineData(1)]
         [InlineData(100)]
         [InlineData(10000)]
